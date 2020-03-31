@@ -17,20 +17,18 @@ const String song2[] = {"g2a2g4f4e4f4g2a2g4f4e4f4g2g2a2h4c4h2a2g2", "2000"};
 const String song3 [] = {"a8a4a4f8a4h2c2", "1000"};
 
 // song von green: Darude Sandstorm
-//const String song4[] = {"d8d8d8d8d8a8d8d8d8d8d8a8d8d8d8d8d8a8a8a8f8f8f8c8d8d8d8d8d8a8d8d8d8d8d8c8d8d8d8d8d8a8a8a8f8f8f8c8d8d8d8d8d8a8d8d8d8d8d8c8d8d8d8d8d8a8a8a8f8f8f8c8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8", "800"};
+// zu lang!!!: const String song4[] = {"d8d8d8d8d8a8d8d8d8d8d8a8d8d8d8d8d8a8a8a8f8f8f8c8d8d8d8d8d8a8d8d8d8d8d8c8d8d8d8d8d8a8a8a8f8f8f8c8d8d8d8d8d8a8d8d8d8d8d8c8d8d8d8d8d8a8a8a8f8f8f8c8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8", "800"};
 const String song4[] = {"d8d8d8d8d8a8d8d8d8d8d8a8d8d8d8d8d8a8a8a8f8f8f8c8d8d8d8d8d8a8d8", "800"};
 
 // song von green: Korobeiniki (Tetris Song)
 const String song5[] = {"h2f4g4a2g4f4e2e4g4h2a4g4f2f4g4a4h4g4e4e2", "1000"};
-
-// song von green
-const String song6[] = {"e4h4e4h4e4h4e4h4f4a4f4a4f4a4f4a4e4h4e4h4e4h4e4h4f4a4f4a4f4a4f4a4", "1000"};
+// mit bassspur: const String song5[] = {"h2f4g4a2g4f4e2e4g4h2a4g4f2f4g4a4h4g4e4e2", "1000", "e4h4e4h4e4h4e4h4f4a4f4a4f4a4f4a4e4h4e4h4e4h4e4h4f4a4f4a4f4a4f4a4"};
 
 // album der oben stehenden Songs
-const String album [][2] = {song0, song1, song2, song3, song4, song5, song6};
+const String album [][2] = {song0, song1, song2, song3, song4, song5};
 
-//int playTime = (sizeof(album) / sizeof(album[0]));
-int playTime = 6;
+int playTime = (sizeof(album) / sizeof(album[0])) - 1;
+
 void setup() {
   pinMode(Speaker, OUTPUT);
   Serial.begin(9600);
